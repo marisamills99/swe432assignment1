@@ -57,7 +57,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
-   String rslt = "";
+   String rslt = new String("");
    if ((lhsStr != null) && (lhsStr.length() > 0))
       lhsVal = new Float(lhsStr);
    if ((rhsStr != null) && (rhsStr.length() > 0))
