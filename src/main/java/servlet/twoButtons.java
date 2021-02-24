@@ -26,7 +26,10 @@ import javax.servlet.annotation.WebServlet;
 //              Fields are filled from the parameters.
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
-@WebServlet(name = "ButtonsServlet", urlPatterns = {"/twoButtons"})
+@WebServlet(
+        name = "tbServlet",
+        urlPatterns = {"/twoButtons"}
+    )
 public class twoButtons extends HttpServlet
 {
 
@@ -122,7 +125,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("multiple submit buttons.");
    out.println("</p>");
    out.print  ("<form method=\"post\"");
-   out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
+   out.println(" action=\"/twoButtons\">");
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");
