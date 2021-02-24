@@ -77,7 +77,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out, lhsStr, rhsStr, rslt;
+   PrintBody(out, lhsStr, rhsStr, rslt);
    PrintTail(out);
 }  // End doPost
 
