@@ -65,12 +65,12 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-      rslt = lhs.concat(rhs);
+      rslt = lhsStr.concat(rhsStr);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      rslt = rhs.concat(lhs);
+      rslt = rhsStr.concat(lhsStr);
    }
 
    response.setContentType("text/html");
