@@ -135,7 +135,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("  </tr>");
    out.println("  <tr>");
    out.println("   <td>Result:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
+   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rhs + "\" size=10>");
    out.println("  </tr>");
    out.println(" </table>");
    out.println(" <br>");
