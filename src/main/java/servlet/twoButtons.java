@@ -62,7 +62,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if ((rhsStr != null) && (rhsStr.length() > 0))
       rhsVal = new Float(rhsStr);
 
-   if (operation.equals(Operation1)
+   if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
       rslt = lhs.concat(rhs);
