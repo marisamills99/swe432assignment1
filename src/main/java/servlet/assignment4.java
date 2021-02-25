@@ -39,7 +39,7 @@ static String Operation1 = "Cat str1str2";
 static String Operation2 = "Cat str2str1";
  
 // Other strings.
-static String Style ="../launch/style.css";
+static String Style ="src/main/java/launch/style.css";
  
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
