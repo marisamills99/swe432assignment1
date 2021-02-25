@@ -26,13 +26,13 @@ import javax.servlet.annotation.WebServlet;
         name = "assignment4",
         urlPatterns = {"/assignment4"}
     )
-public class twoButtons extends HttpServlet
+public class assignment4 extends HttpServlet
 {
  
 // Location of servlet.
 static String Domain  = "cs.gmu.edu:8443";
 static String Path    = "/offutt/servlet/";
-static String Servlet = "twoButtons";
+static String Servlet = "assignment4";
  
 // Button labels
 static String Operation1 = "Cat str1str2";
@@ -159,5 +159,5 @@ private void PrintTail (PrintWriter out)
    out.println("</html>");
 } // End PrintTail
  
-}  // End twoButton
+}  // End assignment4
 
