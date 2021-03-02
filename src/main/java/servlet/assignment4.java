@@ -136,12 +136,12 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
    out.println(" </table>");
    out.println(" <br>");
    out.println(" <br>");
-   out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation1\">");
-   out.println(" <input type=\"submit\" value=\"" + Operation2 + "\" name=\"Operation2\">");
-   out.println(" <input type=\"submit\" value=\"" + ResultSorted + "\" name=\"Operation3\">");
-   out.println(" <input type=\"submit\" value=\"" + ResultRevSorted + "\" name=\"Operation4\">");
-   out.println(" <input type=\"submit\" value=\"" + Random + "\" name=\"Operation5\">");
-   out.println(" <input type=\"submit\" value=\"" + Randomreplace + "\" name=\"Operation6\">");
+   out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + Operation2 + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + ResultSorted + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + ResultRevSorted + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + Random + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + Randomreplace + "\" name=\"Operation\">");
    out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
    out.println("</form>");
    out.println("");
