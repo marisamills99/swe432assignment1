@@ -76,6 +76,21 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rslt = String.join(", ", array);
 
    }
+   else if (operation.equals(ResultSorted))
+   {
+      //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
+      Collections.sort(array);
+      rslt = String.join(", ", array);
+
+   }
+   else if (operation.equals(ResultRevSorted))
+   {
+      //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
+      Collections.sort(array);
+      Collections.reverse(array);
+      rslt = String.join(", ", array);
+
+   }
  
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
