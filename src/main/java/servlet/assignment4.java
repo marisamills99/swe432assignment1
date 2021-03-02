@@ -59,7 +59,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");*/
    String rslt = new String("");
-   String newStr = request.getParameter("newstr");*/
+   String newStr = request.getParameter("newstr");
  
    if (operation.equals(Operation1))
    {
