@@ -41,6 +41,8 @@ static String Operation2 = "Print list";
 // Other strings.
 static String Style ="src/main/java/servlet/assignment4.java";
  
+// my list
+String[] array;
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
  *  Converts the values in the form, performs the operation
@@ -51,23 +53,27 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
    //Float rslt   = new Float(0.0);
-   Float lhsVal = new Float(0.0);
+   /*Float lhsVal = new Float(0.0);
    Float rhsVal = new Float(0.0);
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
-   String rhsStr = request.getParameter("RHS");
+   String rhsStr = request.getParameter("RHS");*/
    String rslt = new String("");
- 
+   String newStr = request.getParameter("newstr");*/
  
    if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-      rslt = lhsStr.concat(rhsStr);
+      array.add(newStr);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      rslt = rhsStr.concat(lhsStr);
+      for (var y=0; y<array.length; y++){
+        rslt = rslt.concat(newStr);
+        rslt = rslt.concat(", ");
+    }
+
    }
  
    response.setContentType("text/html");
@@ -120,7 +126,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" <table>");
    out.println("  <tr>");
    out.println("   <td>Add word here:");
-   out.println("   <td><input type=\"text\" name=\"LHS\" value=\"" + lhs + "\" size=5>");
+   out.println("   <td><input type=\"text\" name=\"newstr\" value=\"" + lhs + "\" size=5>");
    out.println("  </tr>");
    out.println("  <tr>");
    out.println("   <td>Result Sorted List:");
