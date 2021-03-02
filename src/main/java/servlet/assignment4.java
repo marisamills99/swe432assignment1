@@ -35,11 +35,11 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "assignment4";
  
 // Button labels
-static String Operation1 = "add";
+static String Operation1 = "Add to List";
 static String Operation2 = "Print list";
  
 // Other strings.
-static String Style ="src\main\java\servlet\assignment4.java";
+static String Style ="src/main/java/servlet/assignment4.java";
  
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
