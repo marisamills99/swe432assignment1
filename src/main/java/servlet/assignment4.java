@@ -76,7 +76,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out, lhsStr, rhsStr, rslt);
+   PrintBody(out, newStr, rhsStr, rslt);
    PrintTail(out);
 }  // End doPost
  
@@ -113,7 +113,7 @@ private void PrintHead (PrintWriter out)
  *  Prints the <BODY> of the HTML page with the form data
  *  values from the parameters.
 ********************************************************* */
-private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
+private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
 {
    out.println("<body>");
    out.println("<div class=\"header\"><h1>ASSIGNMENT 4 swe432</h1></div>");
@@ -123,7 +123,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" <table>");
    out.println("  <tr>");
    out.println("   <td>Add word here:");
-   out.println("   <td><input type=\"text\" name=\"newstr\" value=\"" + lhs + "\" size=5>");
+   out.println("   <td><input type=\"text\" name=\"newstr\" value=\"" + newStr + "\" size=5>");
    out.println("  </tr>");
    out.println("  <tr>");
    out.println("   <td>Result Sorted List:");
