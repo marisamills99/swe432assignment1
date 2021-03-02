@@ -69,9 +69,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      for (int y=0; y<array.length; y++){
-        //print array
-    }
+      
 
    }
  
