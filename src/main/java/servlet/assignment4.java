@@ -43,7 +43,7 @@ static String Random = "Random without replacement";
 static String Randomreplace = "Random with replacement";
  
 // Other strings.
-static String Style ="src/main/java/servlet/style.css";
+static String Style ="https://mason.gmu.edu/~mmills20/style.css"";
  
 // my list
 List<String> array = new ArrayList<String>();
