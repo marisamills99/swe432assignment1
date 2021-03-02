@@ -138,7 +138,7 @@ private void PrintHead (PrintWriter out)
  
    out.println("<head>");
    out.println("<title>Assignment four</title>");
-   out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"./style.css\">");
+   out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
    out.println("</head>");
    out.println("");
 } // End PrintHead
