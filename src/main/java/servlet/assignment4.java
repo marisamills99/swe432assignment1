@@ -39,7 +39,7 @@ static String Operation1 = "add";
 static String Operation2 = "Print list";
  
 // Other strings.
-static String Style ="style.css";
+static String Style ="src\main\java\servlet\assignment4.java";
  
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
