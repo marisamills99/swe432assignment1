@@ -91,6 +91,21 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rslt = String.join(", ", array);
 
    }
+   else if (operation.equals(Randomreplace))
+   {
+      //shuffle array and get top element
+      Collections.shuffle(array);
+      rslt = array.get(0);
+
+   }
+   else if (operation.equals(Random))
+   {
+      //shuffle array and get top element then remove it
+      Collections.shuffle(array);
+      rslt = array.get(0);
+      array.remove(0);
+   }
+   
  
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
