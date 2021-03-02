@@ -37,6 +37,10 @@ static String Servlet = "assignment4";
 // Button labels
 static String Operation1 = "Add to List";
 static String Operation2 = "Print list";
+static String ResultSorted = "Sorted List";
+static String ResultRevSorted = "Reverse Sorted List";
+static String Random = "Random without replacement";
+static String Randomreplace = "Random with replacement;
  
 // Other strings.
 static String Style ="src/main/java/servlet/style.css";
@@ -126,26 +130,18 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
    out.println("   <td><input type=\"text\" name=\"newstr\" value=\"" + newStr + "\" size=5>");
    out.println("  </tr>");
    out.println("  <tr>");
-   out.println("   <td>Result Sorted List:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
-   out.println("  </tr>");
-   out.println("  <tr>");
-   out.println("   <td>Result Reverse Sorted List:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
-   out.println("  </tr>");
-   out.println("  <tr>");
-   out.println("   <td>Result Random with removal:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
-   out.println("  </tr>");
-   out.println("  <tr>");
-   out.println("   <td>Result Random without removal:");
+   out.println("   <td>Result:");
    out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
    out.println("  </tr>");
    out.println(" </table>");
    out.println(" <br>");
    out.println(" <br>");
-   out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation\">");
-   out.println(" <input type=\"submit\" value=\"" + Operation2 + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation1\">");
+   out.println(" <input type=\"submit\" value=\"" + Operation2 + "\" name=\"Operation2\">");
+   out.println(" <input type=\"submit\" value=\"" + ResultSorted + "\" name=\"Operation3\">");
+   out.println(" <input type=\"submit\" value=\"" + ResultRevSorted + "\" name=\"Operation4\">");
+   out.println(" <input type=\"submit\" value=\"" + Random + "\" name=\"Operation5\">");
+   out.println(" <input type=\"submit\" value=\"" + Randomreplace + "\" name=\"Operation6\">");
    out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
    out.println("</form>");
    out.println("");
