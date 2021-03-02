@@ -118,7 +118,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("<body>");
    out.println("<div class=\"header\"><h1>ASSIGNMENT 4 swe432</h1></div>");
    out.print  ("<form method=\"post\"");
-   out.println(" action=\/assignment4\">");
+   out.println(" action=\"/assignment4\">");
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");
