@@ -42,7 +42,7 @@ static String Operation2 = "Print list";
 static String Style ="src/main/java/servlet/assignment4.java";
  
 // my list
-String[] array;
+List<String> array = new ArrayList<String>();
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
  *  Converts the values in the form, performs the operation
@@ -53,11 +53,11 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
    //Float rslt   = new Float(0.0);
-   /*Float lhsVal = new Float(0.0);
+   Float lhsVal = new Float(0.0);
    Float rhsVal = new Float(0.0);
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
-   String rhsStr = request.getParameter("RHS");*/
+   String rhsStr = request.getParameter("RHS");
    String rslt = new String("");
    String newStr = request.getParameter("newstr");
  
