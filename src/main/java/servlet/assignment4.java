@@ -40,7 +40,7 @@ static String Operation2 = "Print list";
 static String ResultSorted = "Sorted List";
 static String ResultRevSorted = "Reverse Sorted List";
 static String Random = "Random without replacement";
-static String Randomreplace = "Random with replacement;
+static String Randomreplace = "Random with replacement";
  
 // Other strings.
 static String Style ="src/main/java/servlet/style.css";
