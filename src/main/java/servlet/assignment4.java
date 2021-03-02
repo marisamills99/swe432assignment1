@@ -150,7 +150,7 @@ private void PrintHead (PrintWriter out)
 private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
 {
    out.println("<body>");
-   out.println("<div class=\"header\"><h1>ASSIGNMENT 4 swe432</h1></div>");
+   out.println("<div class=\"header\"><h1>SWE 432 ASSIGNMENT 4 </h1></div>");
    out.print  ("<form method=\"post\"");
    out.println(" action=\"/assignment4\">");
    out.println("");
@@ -161,7 +161,7 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
    out.println("  </tr>");
    out.println("  <tr>");
    out.println("   <td>Result:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=10>");
+   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=\"100\"">");
    out.println("  </tr>");
    out.println(" </table>");
    out.println(" <br>");
