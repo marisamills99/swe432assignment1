@@ -35,8 +35,8 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "assignment4";
  
 // Button labels
-static String Operation1 = "Cat str1str2";
-static String Operation2 = "Cat str2str1";
+static String Operation1 = "add";
+static String Operation2 = "Print list";
  
 // Other strings.
 static String Style ="style.css";
