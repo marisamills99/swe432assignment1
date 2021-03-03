@@ -115,6 +115,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       //removing duplicated string
       List<String> newArr = array.stream().distinct().collect(Collectors.toList());
       array = newArr;
+	Collections.sort(array);      
       rslt = String.join(", ", array);
    }
    else if (operation.equals(VandS)) 
@@ -231,8 +232,3 @@ private void PrintTail (PrintWriter out)
 } // End PrintTail
  
 }  // End assignment4
- 
- 
- 
- 
-
