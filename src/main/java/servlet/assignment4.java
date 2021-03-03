@@ -1,8 +1,7 @@
- 
- 
-// Import Java Libraries
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
  
 //Import Servlet Libraries
 import javax.servlet.*;
@@ -41,6 +40,12 @@ static String ResultSorted = "Sorted List";
 static String ResultRevSorted = "Reverse Sorted List";
 static String Random = "Random without replacement";
 static String Randomreplace = "Random with replacement";
+//required element 3
+static String RemoveDuplicate = "Remove Duplicate Item";
+//required element 1
+//removes any string that contains < or > sign
+static String VandS = "Validate and Sanitize Items that contain < or > signs";
+static String Reset = "Reset Result";
  
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
@@ -74,14 +79,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       rslt = String.join(", ", array);
-
+ 
    }
    else if (operation.equals(ResultSorted))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       Collections.sort(array);
       rslt = String.join(", ", array);
-
+ 
    }
    else if (operation.equals(ResultRevSorted))
    {
@@ -89,14 +94,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       Collections.sort(array);
       Collections.reverse(array);
       rslt = String.join(", ", array);
-
+ 
    }
    else if (operation.equals(Randomreplace))
    {
       //shuffle array and get top element
       Collections.shuffle(array);
       rslt = array.get(0);
-
+ 
    }
    else if (operation.equals(Random))
    {
@@ -105,6 +110,27 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rslt = array.get(0);
       array.remove(0);
    }
+   else if (operation.equals(RemoveDuplicate))
+   {
+      //removing duplicated string
+      List<String> newArr = array.stream().distinct().collect(Collectors.toList());
+      array = newArr;
+      rslt = String.join(", ", array);
+   }
+   else if (operation.equals(VandS)) 
+   {
+      List<String> newArr = array;
+      newArr.removeIf(x -> x.contains("<"));
+      newArr.removeIf(x -> x.contains(">"));
+      array = newArr;
+      rslt = String.join(", ", array);
+   }
+   else if (operation.equals(Reset))
+   {
+      array.clear();
+      rslt = String.join("", array);
+   }
+ 
    
  
    response.setContentType("text/html");
@@ -172,9 +198,17 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
    out.println(" <input type=\"submit\" value=\"" + ResultRevSorted + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + Random + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + Randomreplace + "\" name=\"Operation\">");
-   out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
+   out.println(" <input type=\"submit\" value=\"" + RemoveDuplicate + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + VandS + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + Reset + "\" name=\"Operation\">");
    out.println("</form>");
    out.println("");
+   //collab summary
+   out.println("<p>");
+   out.println("Group Members: Marisa Mills, Ximena Perez, Saman Fatima");
+   out.println("</p>");
+   out.println("<p>");   
+ 
    out.println("</body>");
 } // End PrintBody
  
@@ -197,4 +231,8 @@ private void PrintTail (PrintWriter out)
 } // End PrintTail
  
 }  // End assignment4
+ 
+ 
+ 
+ 
 
