@@ -160,7 +160,7 @@ public class PersistenceFile extends HttpServlet{
      out.println("  <tr>");
      out.println("   <td>Favorite color:</td>");
      out.println("   <td><input type=\"text\" name=\""+Data.COLOR.name()
-      +"\" value=\""+color+"\" size=30 required></td>");
+      +"\" value=\""+name+"\" size=30 required></td>");
      out.println("  </tr>");
      out.println("  <tr>");
      out.println("   <td>Age:</td>");
