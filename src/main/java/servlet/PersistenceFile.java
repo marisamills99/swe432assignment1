@@ -54,7 +54,7 @@ public class PersistenceFile extends HttpServlet{
      }
      if(color == null){
       error= "<li>Color is required</li>";
-      name = "";
+      color = "";
     }
      if(age == null){
        error+= "<li>Age is required.<li>";
@@ -83,7 +83,7 @@ public class PersistenceFile extends HttpServlet{
      if (error.length() == 0){
        PrintWriter entriesPrintWriter =
           new PrintWriter(new FileWriter(RESOURCE_FILE, true), true);
-       entriesPrintWriter.println(name+VALUE_SEPARATOR+age);
+       entriesPrintWriter.println(name+VALUE_SEPARATOR+age+VALUE_SEPARATOR+color);
        entriesPrintWriter.close();
 
        printHead(out);
@@ -195,6 +195,7 @@ public class PersistenceFile extends HttpServlet{
         out.println("  <tr>");
         out.println("   <th>Name</th>");
         out.println("   <th>Age</th>");
+        out.println("   <th>Color</th>");
         out.println("  </tr>");
         File file = new File(resourcePath);
         if(!file.exists()){
