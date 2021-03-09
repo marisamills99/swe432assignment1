@@ -45,13 +45,17 @@ public class PersistenceFile extends HttpServlet{
   {
      String name = request.getParameter(Data.NAME.name());
      String age = request.getParameter(Data.AGE.name());
+     String color = request.getParameter(Data.COLOR.name());
 
      String error = "";
      if(name == null){
        error= "<li>Name is required</li>";
        name = "";
      }
-
+     if(color == null){
+      error= "<li>Color is required</li>";
+      name = "";
+    }
      if(age == null){
        error+= "<li>Age is required.<li>";
        age = "";
@@ -87,7 +91,7 @@ public class PersistenceFile extends HttpServlet{
        printTail(out);
      }else{
        printHead(out);
-       printBody(out, name, age, error);
+       printBody(out, name, age, color, error);
        printTail(out);
      }
   }
@@ -152,6 +156,11 @@ public class PersistenceFile extends HttpServlet{
      out.println("   <td>Name:</td>");
      out.println("   <td><input type=\"text\" name=\""+Data.NAME.name()
       +"\" value=\""+name+"\" size=30 required></td>");
+     out.println("  </tr>");
+     out.println("  <tr>");
+     out.println("   <td>Favorite color:</td>");
+     out.println("   <td><input type=\"text\" name=\""+Data.COLOR.name()
+      +"\" value=\""+color+"\" size=30 required></td>");
      out.println("  </tr>");
      out.println("  <tr>");
      out.println("   <td>Age:</td>");
