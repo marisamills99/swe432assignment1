@@ -132,7 +132,7 @@ public class PersistenceFile extends HttpServlet{
    *  Prints the <BODY> of the HTML page
   ********************************************************* */
   private void printBody (
-    PrintWriter out, String name, String age, String error){
+    PrintWriter out, String name, String age, String color, String error){
      out.println("<body onLoad=\"setFocus()\">");
      out.println("<p>");
      out.println(
@@ -160,7 +160,7 @@ public class PersistenceFile extends HttpServlet{
      out.println("  <tr>");
      out.println("   <td>Favorite color:</td>");
      out.println("   <td><input type=\"text\" name=\""+Data.COLOR.name()
-      +"\" value=\""+name+"\" size=30 required></td>");
+      +"\" value=\""+color+"\" size=30 required></td>");
      out.println("  </tr>");
      out.println("  <tr>");
      out.println("   <td>Age:</td>");
