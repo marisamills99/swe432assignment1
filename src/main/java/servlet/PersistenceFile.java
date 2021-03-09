@@ -30,7 +30,7 @@ public class PersistenceFile extends HttpServlet{
 
   // Button labels
   static String OperationAdd = "Add";
-
+  static String Style ="https://mason.gmu.edu/~mmills20/style.css";
   // Other strings.
 
   /** *****************************************************
@@ -117,6 +117,7 @@ public class PersistenceFile extends HttpServlet{
      out.println("<html>");
      out.println("");
      out.println("<head>");
+     out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
      out.println("<title>File Persistence Example</title>");
      // Put the focus in the name field
      out.println ("<script>");
