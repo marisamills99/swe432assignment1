@@ -126,7 +126,6 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
       out.print  ("<br><b>Value:</b> ");
       out.println(att_value);
       
-      out.println(att_age);
    } //end while
 
    out.println("</body>");
