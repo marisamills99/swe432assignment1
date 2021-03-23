@@ -27,8 +27,8 @@ import javax.servlet.annotation.WebServlet;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 @WebServlet(
-        name = "2bServlet",
-        urlPatterns = {"/2b"}
+        name = "5bServlet",
+        urlPatterns = {"/5b"}
     )
 public class assignment5b extends HttpServlet
 {
@@ -36,7 +36,7 @@ public class assignment5b extends HttpServlet
 // Location of servlet.
 static String Domain  = "cs.gmu.edu:8443";
 static String Path    = "/offutt/servlet/";
-static String Servlet = "2b";
+static String Servlet = "5b";
 
 // Button labels
 static String Operation1 = "Cat str1str2";
@@ -122,7 +122,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("multiple submit buttons.");
    out.println("</p>");
    out.print  ("<form method=\"post\"");
-   out.println(" action=\"/twoButtons\">");
+   out.println(" action=\"/5b\">");
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");
