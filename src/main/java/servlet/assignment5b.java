@@ -39,8 +39,8 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "5b";
 
 // Button labels
-static String Operation1 = "Cat str1str2";
-static String Operation2 = "Cat str2str1";
+static String Operation1 = "Cat str1str2 using class variables";
+static String Operation2 = "Cat str1str2 using local variables";
 
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
@@ -66,12 +66,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-      rslt = lhsStr.concat(rhsStr);
+      rslt = rslt.concat(rhsStr);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      rslt = rhsStr.concat(lhsStr);
+      String rslt2 = new String("");
+      rslt2 = rslt2.concat(rhsStr);
+      rslt= rslt2;
    }
 
    response.setContentType("text/html");
@@ -104,7 +106,7 @@ private void PrintHead (PrintWriter out)
    out.println("");
 
    out.println("<head>");
-   out.println("<title>Two buttons example</title>");
+   out.println("<title>extra credit example</title>");
    out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
    out.println("</head>");
    out.println("");
@@ -125,10 +127,10 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" action=\"/5b\">");
    out.println("");
    out.println(" <table>");
-   out.println("  <tr>");
+   /*out.println("  <tr>");
    out.println("   <td>First value:");
    out.println("   <td><input type=\"text\" name=\"LHS\" value=\"" + lhs + "\" size=5>");
-   out.println("  </tr>");
+   out.println("  </tr>");*/
    out.println("  <tr>");
    out.println("   <td>Second value:");
    out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rhs + "\" size=5>");
