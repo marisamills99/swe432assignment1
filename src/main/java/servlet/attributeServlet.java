@@ -39,7 +39,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
     
           // Create a link so the user can create a new session.
           // The link will have a parameter builtin
-          String lifeCycleURL = "/offutt/servlet/sessionLifeCycle";
+          String lifeCycleURL = "attributeServlet";
           out.println("<a href=\"" + lifeCycleURL + "?action=newSession\">");
           out.println("Create new session</A>");
     
