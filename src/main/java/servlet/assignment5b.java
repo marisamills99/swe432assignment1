@@ -81,6 +81,8 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       rslt = String.join(", ", array);
+      rslt.concat(" = array with globals");
+      rslt.concat(" = array with locals");
  
    }
 
