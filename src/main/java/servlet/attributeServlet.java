@@ -1,12 +1,14 @@
 // From "Professional Java Server Programming", Patzer et al.,
 
-// Import Servlet Libraries
+import java.io.*;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+ 
+//Import Servlet Libraries
 import javax.servlet.*;
 import javax.servlet.http.*;
-
-// Import Java Libraries
-import java.io.*;
-import java.util.Enumeration;
+import javax.servlet.annotation.WebServlet;
 
 @WebServlet(
         name = "attributeServlet",
