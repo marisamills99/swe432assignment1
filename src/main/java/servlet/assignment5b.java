@@ -76,7 +76,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      List<String> array2 = new ArrayList<String>();
+      //List<String> array2 = new ArrayList<String>();
       array2.add(rhsStr);
       rslt=String.join(", ", array2);
       //rslt.concat(" = array with locals");
