@@ -138,20 +138,18 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("<p>");
    out.println("A simple example that demonstrates how to operate with");
    out.println("multiple submit buttons.");
-   out.println("How are the values in the local variable and the class instance variable different?
-   The class variable has every update while local only contains the most recent update. Only the new strings are in the local variable string array.
-   Explain why.
-   This is because everytime the class is called the variable is reset to 0.
-   What happens when you send a request from a different browser?
-   From a different browser the class variable does not hold the past values. The local variable acts the same.
-   Explain why.
-   This is because it is a new request and the servlet is being accessed from the beginning again.
-   What happens when you wait 30 minutes, then make an additional request?
-   The same thing as the previous question. The class variable no longer holds past values. 
-   Explain why.
-   This is a new request to the server so it is resending everything to the servlet again. 
-   ;
-   ")
+   out.println("How are the values in the local variable and the class instance variable different?");
+   out.println("The class variable has every update while local only contains the most recent update. Only the new strings are in the local variable string array.");
+   out.println("Explain why.");
+   out.println("This is because everytime the class is called the variable is reset to 0.");
+   out.println("What happens when you send a request from a different browser?");
+   out.println("From a different browser the class variable does not hold the past values. The local variable acts the same.");
+   out.println("Explain why.");
+   out.println("This is because it is a new request and the servlet is being accessed from the beginning again.");
+   out.println("What happens when you wait 30 minutes, then make an additional request?");
+   out.println("The same thing as the previous question. The class variable no longer holds past values. ");
+   out.println("Explain why.");
+   out.println("This is a new request to the server so it is resending everything to the servlet again. ");
    out.println("</p>");
    out.print  ("<form method=\"post\"");
    out.println(" action=\"/5b\">");
