@@ -62,6 +62,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
    String rslt = new String("");
+   String rslt2 = new String("");
    List<String> array = new ArrayList<String>();
 
    if (operation.equals(Operation1))
@@ -81,8 +82,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       rslt = String.join(", ", array);
+      rslt2=String.join(", ", array2);
       rslt.concat(" = array with globals");
-      rslt.concat(" = array with locals");
+      rslt2.concat(" = array with locals");
  
    }
 
