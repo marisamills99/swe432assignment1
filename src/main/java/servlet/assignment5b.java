@@ -39,8 +39,9 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "5b";
 
 // Button labels
-static String Operation1 = "add and print array using class variables";
-static String Operation2 = "add and print using local variables";
+static String Operation1 = "add to array using class variables";
+static String Operation2 = "add to array using local variables";
+static String Printop = "Print lists";
 
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
@@ -67,14 +68,20 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
       array.add(rhsStr);
-      rslt = String.join(", ", array);
+     // rslt = String.join(", ", array);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       List<String> array2 = new ArrayList<String>();
       array2.add(rhsStr);
+      //rslt = String.join(", ", array);
+   }
+   else if (operation.equals(Printop))
+   {
+      //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       rslt = String.join(", ", array);
+ 
    }
 
    response.setContentType("text/html");
@@ -145,6 +152,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" <br>");
    out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + Operation2 + "\" name=\"Operation\">");
+   ut.println(" <input type=\"submit\" value=\"" + Printop + "\" name=\"Operation\">");
    out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
    out.println("</form>");
    out.println("");
