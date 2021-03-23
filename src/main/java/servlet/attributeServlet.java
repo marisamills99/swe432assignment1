@@ -24,6 +24,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
 
    String name   = request.getParameter("attrib_name");
    String value  = request.getParameter("attrib_value");
+   String age  = request.getParameter("attrib_age");
    String remove = request.getParameter("attrib_remove");
 
    if (remove != null && remove.equals("on"))
@@ -65,7 +66,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println(" <input type=\"text\" size=\"10\" name=\"attrib_value\">");
 
    out.println(" Age: ");
-   out.println(" <input type=\"text\" size=\"10\" name=\"attrib_value\">");
+   out.println(" <input type=\"text\" size=\"10\" name=\"attrib_age\">");
    
    out.println(" <br><input type=\"checkbox\" name=\"attrib_remove\">Remove");
    out.println(" <input type=\"submit\" name=\"update\" value=\"Update\">");
