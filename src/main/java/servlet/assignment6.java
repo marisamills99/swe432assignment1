@@ -225,17 +225,12 @@ private void printResponseBody (PrintWriter out, String resourcePath){
     out.println("<body>");
     out.println("<p>");
     out.println(
-    "A simple example that shows entries from a plain file");
+    "Entries read from a plain file");
     out.println("</p>");
     out.println("");
     out.println(" <table>");
 
     try {
-        out.println("  <tr>");
-        out.println("   <th>Name</th>");
-        out.println("   <th>Age</th>");
-        out.println("   <th>Color</th>");
-        out.println("  </tr>");
         File file = new File(resourcePath);
         if(!file.exists()){
           out.println("  <tr>");
@@ -251,7 +246,7 @@ private void printResponseBody (PrintWriter out, String resourcePath){
           String []  entry= line.split(",");
           //out.println("  <tr>");
           for(String value: entry){
-              out.println("   <p>"+value+"</p>");
+              out.println("   <p>"+line+"</p>");
           }
           //out.println("  </tr>");
         }
