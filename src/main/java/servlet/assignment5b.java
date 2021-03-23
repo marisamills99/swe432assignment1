@@ -39,8 +39,8 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "5b";
 
 // Button labels
-static String Operation1 = "Cat str1str2 using class variables";
-static String Operation2 = "Cat str1str2 using local variables";
+static String Operation1 = "add and print array using class variables";
+static String Operation2 = "add and print using local variables";
 
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
@@ -61,19 +61,20 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
    String rslt = new String("");
-
+   List<String> array = new ArrayList<String>();
 
    if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-      rslt = rslt.concat(rhsStr);
+      array.add(newStr);
+      rslt = String.join(", ", array);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
-      String rslt2 = new String("");
-      rslt2 = rslt2.concat(rhsStr);
-      rslt= rslt2;
+      List<String> array2 = new ArrayList<String>();
+      array2.add(newStr);
+      rslt = String.join(", ", array);
    }
 
    response.setContentType("text/html");
@@ -132,7 +133,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("   <td><input type=\"text\" name=\"LHS\" value=\"" + lhs + "\" size=5>");
    out.println("  </tr>");*/
    out.println("  <tr>");
-   out.println("   <td>Second value:");
+   out.println("   <td>String to append:");
    out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rhs + "\" size=5>");
    out.println("  </tr>");
    out.println("  <tr>");
