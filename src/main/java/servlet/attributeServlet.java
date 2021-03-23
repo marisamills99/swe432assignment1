@@ -53,6 +53,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    HttpSession session = request.getSession();
 
    String name   = request.getParameter("attrib_name");
+   String name2   = request.getParameter("attrib_name2");
    String value  = request.getParameter("attrib_value");
    String age  = request.getParameter("attrib_age");
    String remove = request.getParameter("attrib_remove");
@@ -63,11 +64,15 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    }
    else
    {
-      if ((name != null && name.length() > 0) && (value != null && value.length() > 0)&& (age != null && age.length() > 0))
+      if ((name != null && name.length() > 0) && (value != null && value.length() > 0))
       {
-         session.setAttribute(name, age);
+         session.setAttribute(name, value);
+         if ((name2 != null && name2.length() > 0) && (age != null && age.length() > 0))
+      {
+         session.setAttribute(name2, age);
       }
-
+      }
+      
    }
 
    response.setContentType("text/html");
@@ -95,6 +100,8 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println(" Value: ");
    out.println(" <input type=\"text\" size=\"10\" name=\"attrib_value\">");
 
+   out.println(" Name: ");
+   out.println(" <input type=\"text\" size=\"10\" name=\"attrib_name2\">");
    out.println(" Age: ");
    out.println(" <input type=\"text\" size=\"10\" name=\"attrib_age\">");
    
@@ -112,12 +119,15 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    {
       String att_name  = (String) e.nextElement();
       String att_value = (String) session.getAttribute(att_name);
-      String att_age = (String) session.getAttribute(att_value);
+      String att_name2 = (String) session.getAttribute(att_value);
+      String att_age = (String) session.getAttribute(att_name2);
 
       out.print  ("<br><b>Name:</b> ");
       out.println(att_name);
       out.print  ("<br><b>Value:</b> ");
       out.println(att_value);
+      out.print  ("<br><b>Name:</b> ");
+      out.println(att_name2);
       out.print  ("<br><b>Age:</b> ");
       out.println(att_age);
    } //end while
