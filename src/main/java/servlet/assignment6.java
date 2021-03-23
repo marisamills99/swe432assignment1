@@ -139,7 +139,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    PrintWriter out = response.getWriter();
    PrintWriter entriesPrintWriter =
           new PrintWriter(new FileWriter(RESOURCE_FILE, true), true);
-       entriesPrintWriter.println(rslt+VALUE_SEPARATOR);
+       entriesPrintWriter.println(rslt);
        entriesPrintWriter.close();
    PrintHead(out);
    PrintBody(out, newStr, rhsStr, rslt);
@@ -248,7 +248,7 @@ private void printResponseBody (PrintWriter out, String resourcePath){
           new BufferedReader(new FileReader(file));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-          String []  entry= line.split(',');
+          String []  entry= line.split(",");
           //out.println("  <tr>");
           for(String value: entry){
               out.println("   <p>"+value+"</p>");
