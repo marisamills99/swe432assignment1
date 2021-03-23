@@ -67,10 +67,11 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
       if ((name != null && name.length() > 0) && (value != null && value.length() > 0))
       {
          session.setAttribute(name, value);
-         if ((name2 != null && name2.length() > 0) && (age != null && age.length() > 0))
+  
+      }
+      if ((name2 != null && name2.length() > 0) && (age != null && age.length() > 0))
       {
          session.setAttribute(name2, age);
-      }
       }
       
    }
