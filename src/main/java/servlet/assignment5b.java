@@ -39,9 +39,9 @@ static String Path    = "/offutt/servlet/";
 static String Servlet = "5b";
 
 // Button labels
-static String Operation1 = "add to array using class variables";
+static String Operation1 = "add to array using instance variables";
 static String Operation2 = "add to array and print using local variables";
-static String Printop = "Print list with class";
+static String Printop = "Print instance variables list";
 
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
