@@ -30,7 +30,7 @@ import javax.servlet.annotation.WebServlet;
         name = "2bServlet",
         urlPatterns = {"/2b"}
     )
-public class twoButtons extends HttpServlet
+public class assignment6b extends HttpServlet
 {
 
 // Location of servlet.
