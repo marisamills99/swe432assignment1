@@ -35,7 +35,7 @@ static String Servlet = "assignment6";
  
 // Button labels
 static String Operation1 = "Add to List";
-static String Operation2 = "Print list";
+static String Operation2 = "Print list from file";
 static String ResultSorted = "Sorted List";
 static String ResultRevSorted = "Reverse Sorted List";
 static String Random = "Random without replacement";
@@ -243,11 +243,12 @@ private void printResponseBody (PrintWriter out, String resourcePath){
           new BufferedReader(new FileReader(file));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-          String []  entry= line.split(",");
+          out.println("   <p>"+line+"</p>");
+          //String []  entry= line.split(",");
           //out.println("  <tr>");
-          for(String value: entry){
-              out.println("   <p>"+line+"</p>");
-          }
+          /*for(String value: entry){
+              
+          }*/
           //out.println("  </tr>");
         }
         bufferedReader.close();
