@@ -248,7 +248,7 @@ private void printResponseBody (PrintWriter out, String resourcePath){
           new BufferedReader(new FileReader(file));
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-          String []  entry= line.split(,);
+          String []  entry= line.split(',');
           //out.println("  <tr>");
           for(String value: entry){
               out.println("   <p>"+value+"</p>");
