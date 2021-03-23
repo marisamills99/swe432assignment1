@@ -17,38 +17,38 @@ import javax.servlet.annotation.WebServlet;
 public class attributeServlet extends HttpServlet
 {
 public void doGet (HttpServletRequest request, HttpServletResponse response)
-       throws ServletException, IOException{
-         String action = request.getParameter("action");
-       if (action != null && action.equals("invalidate"))
-       {  // Called from the invalidate button, kill the session.
-          // Get session object
-          HttpSession session = request.getSession();
-          session.invalidate();
-    
-          response.setContentType("text/html");
-          PrintWriter out = response.getWriter();
-    
-          out.println("<html>");
-          out.println("<head>");
-          out.println(" <title>Session lifecycle</title>");
-          out.println("</head>");
-          out.println("");
-          out.println("<body>");
-    
-          out.println("<p>Your session has been invalidated.</P>");
-    
-          // Create a link so the user can create a new session.
-          // The link will have a parameter builtin
-          String lifeCycleURL = "attributeServlet";
-          out.println("<a href=\"" + lifeCycleURL + "?action=newSession\">");
-          out.println("Create new session</A>");
-    
-          out.println("</body>");
-          out.println("</html>");
-          out.close();
-       } //end if
-       else
-       {
+       throws ServletException, IOException
+{
+   String action = request.getParameter("action");
+   if (action != null && action.equals("invalidate"))
+   {  // Called from the invalidate button, kill the session.
+      // Get session object
+      HttpSession session = request.getSession();
+      session.invalidate();
+
+      response.setContentType("text/html");
+      PrintWriter out = response.getWriter();
+
+      out.println("<html>");
+      out.println("<head>");
+      out.println(" <title>Session lifecycle</title>");
+      out.println("</head>");
+      out.println("");
+      out.println("<body>");
+
+      out.println("<p>Your session has been invalidated.</P>");
+
+      // Create a link so the user can create a new session.
+      // The link will have a parameter builtin
+      String lifeCycleURL = "/offutt/servlet/sessionLifeCycle";
+      out.println("<a href=\"" + lifeCycleURL + "?action=newSession\">");
+      out.println("Create new session</A>");
+
+      out.println("</body>");
+      out.println("</html>");
+      out.close();
+   } //end if
+   else{
    // Get session object
    HttpSession session = request.getSession();
 
@@ -122,5 +122,6 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println("</body>");
    out.println("</html>");
    out.close();
+}//end else
 } // End doGet
 } //End  SessionLifeCycle
