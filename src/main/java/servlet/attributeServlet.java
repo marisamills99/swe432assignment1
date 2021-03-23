@@ -63,9 +63,9 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    }
    else
    {
-      if ((name != null && name.length() > 0) && (value != null && value.length() > 0))
+      if ((name != null && name.length() > 0) && (value != null && value.length() > 0)&& (age != null && age.length() > 0))
       {
-         session.setAttribute(name, value);
+         session.setAttribute(name, value, age);
       }
 
    }
@@ -84,7 +84,7 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    out.println("<body>");
    out.println("<h1><center>Session attributes</center></h1>");
 
-   out.println("Enter name and value of an attribute");
+   out.println("Enter name and value and age of an attribute");
 
    // String url = response.encodeURL ("offutt/servlet/attributeServlet");
    String url = response.encodeURL("attributeServlet");
