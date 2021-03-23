@@ -66,14 +66,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if (operation.equals(Operation1))
    {
       //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-      array.add(newStr);
+      array.add(rhsStr);
       rslt = String.join(", ", array);
    }
    else if (operation.equals(Operation2))
    {
       //rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
       List<String> array2 = new ArrayList<String>();
-      array2.add(newStr);
+      array2.add(rhsStr);
       rslt = String.join(", ", array);
    }
 
