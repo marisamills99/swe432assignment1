@@ -112,13 +112,14 @@ public void doGet (HttpServletRequest request, HttpServletResponse response)
    {
       String att_name  = (String) e.nextElement();
       String att_value = (String) session.getAttribute(att_name);
+      String att_age = (String) session.getAttribute(att_value);
 
       out.print  ("<br><b>Name:</b> ");
       out.println(att_name);
       out.print  ("<br><b>Value:</b> ");
       out.println(att_value);
       out.print  ("<br><b>Age:</b> ");
-      out.println(att_value);
+      out.println(att_age);
    } //end while
 
    out.println("</body>");
