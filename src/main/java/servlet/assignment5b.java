@@ -46,6 +46,8 @@ static String Printop = "Print list with class";
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
 
+List<String> array = new ArrayList<String>();
+
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
  *  Converts the values in the form, performs the operation
@@ -63,7 +65,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String rhsStr = request.getParameter("RHS");
    String rslt = new String("");
    String rslt2 = new String("");
-   List<String> array = new ArrayList<String>();
+   List<String> array2 = new ArrayList<String>();
 
    if (operation.equals(Operation1))
    {
