@@ -90,7 +90,7 @@ private void PrintHead (PrintWriter out)
    out.println("");
  
    out.println("<head>");
-   out.println("<title>Assignment six</title>");
+   out.println("<title>Assignment 7</title>");
    out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
    out.println("</head>");
    out.println("");
@@ -103,7 +103,7 @@ private void PrintHead (PrintWriter out)
 private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
 {
    out.println("<body>");
-   out.println("<div class=\"header\"><h1>SWE 432 ASSIGNMENT 6 </h1></div>");
+   out.println("<div class=\"header\"><h1>SWE 432 ASSIGNMENT 7 </h1></div>");
    out.print  ("<form method=\"post\"");
    out.println(" action=\"/assignment7a\">");
    out.println("");
@@ -140,47 +140,6 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
 } // End PrintBody
  
 
-
-private void printResponseBody (PrintWriter out, String resourcePath){
-    out.println("<body>");
-    out.println("<p>");
-    out.println(
-    "Entries read from a plain file");
-    out.println("</p>");
-    out.println("");
-    out.println(" <table>");
-
-    try {
-        File file = new File(resourcePath);
-        if(!file.exists()){
-          out.println("  <tr>");
-          out.println("   <td>No entries persisted yet.</td>");
-          out.println("  </tr>");
-          return;
-        }
-
-        BufferedReader bufferedReader =
-          new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-          out.println("   <p>"+line+"</p>");
-          //String []  entry= line.split(",");
-          //out.println("  <tr>");
-          /*for(String value: entry){
-              
-          }*/
-          //out.println("  </tr>");
-        }
-        bufferedReader.close();
-      } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-     out.println(" </table>");
-     out.println("");
-     out.println("</body>");
-  }
 
 
 /** *****************************************************
