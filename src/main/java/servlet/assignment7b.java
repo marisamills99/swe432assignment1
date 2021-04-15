@@ -143,7 +143,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
        entriesPrintWriter.close();
    PrintHead(out);
    PrintBody(out, newStr, rhsStr, rslt);
-   printResponseBody(out, RESOURCE_FILE);
+   //printResponseBody(out, RESOURCE_FILE);
    PrintTail(out);
 }  // End doPost
  
@@ -221,46 +221,7 @@ private void PrintBody (PrintWriter out, String newStr, String rhs, String rslt)
  
 
 
-private void printResponseBody (PrintWriter out, String resourcePath){
-    out.println("<body>");
-    out.println("<p>");
-    out.println(
-    "Entries read from a plain file");
-    out.println("</p>");
-    out.println("");
-    out.println(" <table>");
 
-    try {
-        File file = new File(resourcePath);
-        if(!file.exists()){
-          out.println("  <tr>");
-          out.println("   <td>No entries persisted yet.</td>");
-          out.println("  </tr>");
-          return;
-        }
-
-        BufferedReader bufferedReader =
-          new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = bufferedReader.readLine()) != null) {
-          out.println("   <p>"+line+"</p>");
-          //String []  entry= line.split(",");
-          //out.println("  <tr>");
-          /*for(String value: entry){
-              
-          }*/
-          //out.println("  </tr>");
-        }
-        bufferedReader.close();
-      } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-     out.println(" </table>");
-     out.println("");
-     out.println("</body>");
-  }
 
 
 /** *****************************************************
