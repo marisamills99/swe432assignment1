@@ -59,27 +59,27 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
    Float rslt   = new Float(0.0);
-   Float lhsVal = new Float(0.0);
+   Float inputVal = new Float(0.0);
    Float rhsVal = new Float(0.0);
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
    if ((lhsStr != null) && (lhsStr.length() > 0))
-      lhsVal = new Float(lhsStr);
+      inputVal = new Float(lhsStr);
    if ((rhsStr != null) && (rhsStr.length() > 0))
       rhsVal = new Float(rhsStr);
    if (operation.equals(Operation1))
    {
-         //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-         array.add(lhs);
+         //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
+         array.add(inputVal);
    }
    else if (operation.equals(OperationAdd))
    {
-      rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
+      rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
    }
    else if (operation.equals(OperationSub))
    {
-      rslt = new Float(lhsVal.floatValue() - rhsVal.floatValue());
+      rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
    }
 
    response.setContentType("text/html");
