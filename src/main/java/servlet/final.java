@@ -1,5 +1,6 @@
 /** *****************************************************************
     final.java   servlet example
+
         @author Jeff Offutt
 ********************************************************************* */
 // modified: David Gonzalez (uses @WebServlet, and js/ resource folder)
@@ -172,4 +173,4 @@ private void PrintTail (PrintWriter out)
    out.println("</html>");
 } // End PrintTail
 
-}  // End twoButton
+}  // End final
