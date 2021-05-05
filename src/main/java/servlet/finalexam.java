@@ -132,10 +132,13 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       Collections.sort(array);
       double median;
-      if (array.size() % 2 == 0)
-         median = ((double)array.get(array.size()/2) + (double)array.get(array.size()/2 - 1))/2;
-      else
-         median = (double) array.get(array.size()/2);
+      //check if length is even or odd
+      if (array.size() % 2 == 0){
+         median = (array.get(array.size()/2) + (double)array.get(array.size()/2 - 1))/2;
+      }
+      else{
+         median =  array.get(array.size()/2);
+      }
          rslt= median;
    }
    else if (operation.equals(OperationStd))
