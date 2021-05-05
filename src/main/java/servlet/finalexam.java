@@ -107,7 +107,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    }
    else if (operation.equals(OperationMode))
    {
-      double mode;
+      double mode=0.0;
       int maxCount = 0;
       int length = array.size();
   
