@@ -45,6 +45,7 @@ List<Double> array = new ArrayList<Double>();
 // Button labels
 static String OperationAdd = "Add";
 static String OperationSub = "Subtract";
+static String OperationStats = "PrintMean";
 static String Operation1 = "Add to List";
 // Other strings.
 static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
@@ -71,11 +72,16 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if (operation.equals(Operation1))
    {
          rslt = new Double(inputVal.doubleValue());
-         array.add(inputVal);
+         array.add(rslt);
    }
-   else if (operation.equals(OperationAdd))
+   else if (operation.equals(OperationStats))
    {
       //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
+      double sum = 0;
+      for (int i = 0; i < array.size(); i++) {
+         sum += array[i];
+      }
+      rslt= sum / array.size();
    }
    else if (operation.equals(OperationSub))
    {
