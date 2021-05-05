@@ -85,6 +85,25 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       }
       rslt= sum / array.size();
    }
+   else if (operation.equals(OperationMode))
+   {
+      //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
+      int maxVal, maxCount;
+
+    for (int i = 0; i < array.size(); ++i) {
+        int count = 0;
+        for (int j = 0; j < array.size(); ++j) {
+            if (array.get(j) == array.get(i)){
+             count=count+1;
+            }
+        }
+        if (count >= maxCount) {
+            maxCount = count;
+            maxVal = array.get(i);
+        }
+    }
+      rslt= maxVal;
+   }
    else if (operation.equals(OperationSub))
    {
       //rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
