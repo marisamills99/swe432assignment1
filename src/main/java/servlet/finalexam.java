@@ -116,7 +116,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(OperationStd))
    {
       //rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
-      rslt=stats.getStandardDeviation();
+      //rslt=stats.getStandardDeviation();
    }
 
    response.setContentType("text/html");
