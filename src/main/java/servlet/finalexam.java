@@ -9,7 +9,7 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import org.apache.commons.math;
+//import org.apache.commons.math;
  
 //Import Servlet Libraries
 import javax.servlet.*;
@@ -69,12 +69,12 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
 
-   DescriptiveStatistics stats = new DescriptiveStatistics();
+   /*DescriptiveStatistics stats = new DescriptiveStatistics();
 
    // Add the data from the array
    for( int i = 0; i < array.size(); i++) {
          stats.addValue(array.get(i));
-   }
+   }*/
 
    if ((lhsStr != null) && (lhsStr.length() > 0))
       inputVal = new Double(lhsStr);
@@ -100,7 +100,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       Double maxVal, maxCount;
 
     for (int i = 0; i < array.size(); ++i) {
-        Double count = 0;
+        Double count = 0.0;
         for (int j = 0; j < array.size(); ++j) {
             if (array.get(j) == array.get(i)){
              count=count+1;
