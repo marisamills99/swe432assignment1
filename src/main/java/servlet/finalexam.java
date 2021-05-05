@@ -51,7 +51,7 @@ static String OperationMode = "Print Mode";
 static String OperationMedian = "Print Median";
 static String Operation1 = "Add to List";
 // Other strings.
-static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
+static String Style ="https://mason.gmu.edu/~mmills20/style.css";
 
 /** *****************************************************
  *  Overrides HttpServlet's doPost().
