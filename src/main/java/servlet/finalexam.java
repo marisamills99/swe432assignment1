@@ -58,9 +58,9 @@ static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
-   Float rslt   = new Float(0.0);
-   Float inputVal = new Float(0.0);
-   Float rhsVal = new Float(0.0);
+   Float rslt   = new Double(0.0);
+   Float inputVal = new Double(0.0);
+   Float rhsVal = new Double(0.0);
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
