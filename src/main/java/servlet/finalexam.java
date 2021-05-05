@@ -71,7 +71,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    if (operation.equals(Operation1))
    {
          //rslt = new Float(lhsVal.floatValue() + rhsVal.floatValue());
-         array.add(newStr);
+         array.add(lhs);
    }
    else if (operation.equals(OperationAdd))
    {
@@ -134,13 +134,13 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");
-   out.println("   <td>First value:");
+   out.println("   <td>Input number:");
    out.println("   <td><input type=\"text\" name=\"LHS\" value=\"" + lhs + "\" size=5>");
    out.println("  </tr>");
-   out.println("  <tr>");
-   out.println("   <td>Second value:");
-   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rhs + "\" size=5>");
-   out.println("  </tr>");
+   //out.println("  <tr>");
+   //out.println("   <td>Second value:");
+  // out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rhs + "\" size=5>");
+  // out.println("  </tr>");
    out.println("  <tr>");
    out.println("   <td>Result:");
    out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=6>");
@@ -148,8 +148,8 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" </table>");
    out.println(" <br>");
    out.println(" <br>");
-   out.println(" <input type=\"submit\" value=\"" + OperationAdd + "\" name=\"Operation\">");
-   out.println(" <input type=\"submit\" value=\"" + OperationSub + "\" name=\"Operation\">");
+   //out.println(" <input type=\"submit\" value=\"" + OperationAdd + "\" name=\"Operation\">");
+   //out.println(" <input type=\"submit\" value=\"" + OperationSub + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation\">");
    out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
    out.println("</form>");
