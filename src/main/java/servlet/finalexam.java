@@ -85,7 +85,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
          double x = new Double(inputVal.doubleValue());
          array.add(x);
-         rsltlist= String.join(", ", array);
+         rsltlist= Arrays.toString(array);
    }
    else if (operation.equals(OperationMean))
    {
