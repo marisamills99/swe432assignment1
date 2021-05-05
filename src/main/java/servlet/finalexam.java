@@ -98,9 +98,10 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
       double maxVal=0.0;
-      double maxCount=0.0;
+      int maxCount=0;
+      int count = 0;
       for (int i = 0; i < array.size(); ++i) {
-        double count = 0.0;
+         count=0;
         for (int j = 0; j < array.size(); ++j) {
             if (array.get(j) == array.get(i)){
              count=count+1;
@@ -112,6 +113,16 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
         }
     }
       rslt= maxVal;
+   }
+   else if (operation.equals(OperationMedian))
+   {
+      Collections.sort(numArray);
+      double median;
+      if (numArray.size() % 2 == 0)
+         median = ((double)numArray[numArray.size()/2] + (double)numArray[numArray.size()/2 - 1])/2;
+      else
+         median = (double) numArray[numArray.size()/2];
+         rslt= median;
    }
    else if (operation.equals(OperationStd))
    {
