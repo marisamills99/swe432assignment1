@@ -116,7 +116,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
           int count = 0;
           for (int j = 0; j < length; ++j) 
           {
-              if (Double.compare(array.get(i), array.get(j)==0)) {
+              if (Double.compare(array.get(i), array.get(j))==0) {
                   ++count;
               }
               if (count > maxCount) 
