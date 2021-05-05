@@ -45,7 +45,9 @@ List<Double> array = new ArrayList<Double>();
 // Button labels
 static String OperationAdd = "Add";
 static String OperationSub = "Subtract";
-static String OperationMean = "PrintMean";
+static String OperationMean = "Print Mean";
+static String OperationMode = "Print Mode";
+static String OperationMedian = "Print Median";
 static String Operation1 = "Add to List";
 // Other strings.
 static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
@@ -154,9 +156,12 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println(" </table>");
    out.println(" <br>");
    out.println(" <br>");
-   out.println(" <input type=\"submit\" value=\"" + OperationMean + "\" name=\"Operation\">");
+   
    //out.println(" <input type=\"submit\" value=\"" + OperationSub + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + Operation1 + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + OperationMean + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + OperationMode + "\" name=\"Operation\">");
+   out.println(" <input type=\"submit\" value=\"" + OperationMedian + "\" name=\"Operation\">");
    out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
    out.println("</form>");
    out.println("");
