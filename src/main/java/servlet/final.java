@@ -1,5 +1,5 @@
 /** *****************************************************************
-    final.java   servlet example
+    twoButtons.java   servlet example
 
         @author Jeff Offutt
 ********************************************************************* */
@@ -12,7 +12,7 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-// final class
+// twoButtons class
 // CONSTRUCTOR: no constructor specified (default)
 //
 // ***************  PUBLIC OPERATIONS  **********************************
@@ -27,13 +27,13 @@ import javax.servlet.http.*;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-public class final extends HttpServlet
+public class twoButtons extends HttpServlet
 {
 
 // Location of servlet.
 static String Domain  = "cs.gmu.edu:8443";
 static String Path    = "/offutt/servlet/";
-static String Servlet = "final";
+static String Servlet = "twoButtons";
 
 // Button labels
 static String OperationAdd = "Add";
@@ -163,4 +163,4 @@ private void PrintTail (PrintWriter out)
    out.println("</html>");
 } // End PrintTail
 
-}  // End final
+}  // End twoButtons
