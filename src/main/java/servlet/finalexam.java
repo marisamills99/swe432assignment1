@@ -92,9 +92,16 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
             sb.append(s);
             sb.append(", ");
          }
+         //print the current list
          rsltlist = sb.toString();
         // rsltlist= Arrays.toString(array);
 
+   
+   }
+   else if (operation.equals("Reset"))
+   {
+      
+      array = new ArrayList<Double>();
    }
    else if (operation.equals(OperationMean))
    {
@@ -103,6 +110,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       for (int i = 0; i < array.size(); i++) {
          sum += array.get(i);
       }
+      //sum over size = mean
       rslt= sum / array.size();
    }
    else if (operation.equals(OperationMode))
@@ -110,15 +118,17 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       double mode=0.0;
       int maxCount = 0;
       int length = array.size();
-  
+      //iterate through and check how many times each num appears
       for (int i = 0; i < length; ++i) 
       {
+         //curr count
           int count = 0;
           for (int j = 0; j < length; ++j) 
           {
               if (Double.compare(array.get(i), array.get(j))==0) {
                   ++count;
               }
+              //if the current is greater then the max we have seen 
               if (count > maxCount) 
               {
               maxCount = count;
@@ -126,6 +136,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
               }
           }           
       }
+      //set our mode
       rslt= mode;
    }
    else if (operation.equals(OperationMedian))
@@ -150,15 +161,17 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       for (int i = 0; i < array.size(); i++) {
          sum += array.get(i);
       }
+      //calculate mean
       double mean = sum / array.size();
       double cursum = 0;
-
+      //calclate the differences 
       for (int i = 0; i < array.size(); i++)
       {
          double val = array.get(i);
          double sqred = Math.pow(val - mean, 2);
          cursum += sqred;
       }
+      //calculatle the diffs 
       double mdiffs = (double) cursum / (double) (array.size());
       rslt= Math.sqrt(mdiffs);
    }
