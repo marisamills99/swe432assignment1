@@ -123,7 +123,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
         if (maxCount > 1) {
             rslt= mode;
         }
-        rslt= 0;
+        rslt= 0.0;
    }
    else if (operation.equals(OperationMedian))
    {
