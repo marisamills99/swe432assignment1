@@ -11,7 +11,8 @@ import java.util.*;
 //Import Servlet Libraries
 import javax.servlet.*;
 import javax.servlet.http.*;
-
+import javax.servlet.annotation.WebServlet;
+// twoButtons class
 // twoButtons class
 // CONSTRUCTOR: no constructor specified (default)
 //
@@ -26,14 +27,17 @@ import javax.servlet.http.*;
 //              Fields are filled from the parameters.
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
-
+@WebServlet(
+        name = "finalexam",
+        urlPatterns = {"/finalexaxm"}
+    )
 public class finalexam extends HttpServlet
 {
 
 // Location of servlet.
 static String Domain  = "cs.gmu.edu:8443";
 static String Path    = "/offutt/servlet/";
-static String Servlet = "twoButtons";
+//static String Servlet = "twoButtons";
 
 // Button labels
 static String OperationAdd = "Add";
