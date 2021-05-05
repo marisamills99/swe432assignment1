@@ -37,7 +37,7 @@ public class finalexam extends HttpServlet
 // Location of servlet.
 static String Domain  = "cs.gmu.edu:8443";
 static String Path    = "/offutt/servlet/";
-//static String Servlet = "twoButtons";
+static String Servlet = "finalexam";
 
 // Button labels
 static String OperationAdd = "Add";
@@ -123,7 +123,7 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("multiple submit buttons.");
    out.println("</p>");
    out.print  ("<form method=\"post\"");
-   out.println(" action=\"https://" + Domain + Path + Servlet + "\">");
+   out.println(" action=\"/finalexam\">");
    out.println("");
    out.println(" <table>");
    out.println("  <tr>");
