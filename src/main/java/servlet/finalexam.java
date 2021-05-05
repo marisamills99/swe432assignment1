@@ -35,9 +35,9 @@ public class finalexam extends HttpServlet
 {
 
 // Location of servlet.
-static String Domain  = "cs.gmu.edu:8443";
-static String Path    = "/offutt/servlet/";
-static String Servlet = "finalexam";
+//static String Domain  = "cs.gmu.edu:8443";
+//static String Path    = "/offutt/servlet/";
+//static String Servlet = "finalexam";
 
 // Button labels
 static String OperationAdd = "Add";
