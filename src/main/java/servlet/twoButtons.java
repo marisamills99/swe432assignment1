@@ -30,6 +30,8 @@ import javax.servlet.annotation.WebServlet;
         name = "tbServlet",
         urlPatterns = {"/twoButtons"}
     )
+
+List<Double> array = new ArrayList<Double>();
 public class twoButtons extends HttpServlet
 {
 
@@ -61,7 +63,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
    String rslt = new String("");
-
+   
 
    if (operation.equals(Operation1))
    {
