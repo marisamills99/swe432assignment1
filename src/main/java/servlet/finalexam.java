@@ -107,23 +107,26 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    }
    else if (operation.equals(OperationMode))
    {
-      double mode = array.get(0);
-        int maxCount = 0;
-        for (int i = 0; i < array.size(); i++) {
-            double value = array.get(i);
-            int count = 0;
-            for (int j = 0; j < array.size(); j++) {
-                if (array.get(j) == value){ count++;}
-                if (count > maxCount) {
-                    mode = value;
-                    maxCount = count;
-                    }
-                }
-        }
-        if (maxCount > 1) {
-            rslt= mode;
-        }
-        rslt= 0.0;
+      double mode;
+      int maxCount = 0;
+      int length = freq.size();
+  
+      for (int i = 0; i < length; ++i) 
+      {
+          int count = 0;
+          for (int j = 0; j < length; ++j) 
+          {
+              if (freq.get(i) == freq.get(j)) {
+                  ++count;
+              }
+              if (count > maxCount) 
+              {
+              maxCount = count;
+              mode = freq.get(i);
+              }
+          }           
+      }
+      rslt= mode;
    }
    else if (operation.equals(OperationMedian))
    {
