@@ -27,7 +27,7 @@ import javax.servlet.http.*;
 // private void PrintTail (PrintWriter out) --> Prints the HTML bottom
 //***********************************************************************
 
-public class twoButtons extends HttpServlet
+public class finalexam extends HttpServlet
 {
 
 // Location of servlet.
