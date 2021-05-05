@@ -78,10 +78,10 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
       double sum = 0;
-      for (int i = 0; i < array.length(); i++) {
-         sum += array[i];
+      for (int i = 0; i < array.size(); i++) {
+         sum += array.get(i);
       }
-      rslt= sum / array.length();
+      rslt= sum / array.size();
    }
    else if (operation.equals(OperationSub))
    {
