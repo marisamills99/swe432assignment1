@@ -70,7 +70,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rhsVal = new Double(rhsStr);
    if (operation.equals(Operation1))
    {
-         rslt = new Double(inputVal.doubleValue())
+         rslt = new Double(inputVal.doubleValue());
          array.add(inputVal);
    }
    else if (operation.equals(OperationAdd))
