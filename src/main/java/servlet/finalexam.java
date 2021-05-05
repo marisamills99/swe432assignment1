@@ -50,6 +50,7 @@ static String OperationMean = "Print Mean";
 static String OperationMode = "Print Mode";
 static String OperationMedian = "Print Median";
 static String Operation1 = "Add to List";
+static String Reset = "Reset";
 // Other strings.
 static String Style ="https://mason.gmu.edu/~mmills20/style.css";
 
@@ -98,10 +99,10 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
    
    }
-   else if (operation.equals("Reset"))
+   else if (operation.equals(Reset))
    {
       
-      array = new ArrayList<Double>();
+      array.clear();
    }
    else if (operation.equals(OperationMean))
    {
@@ -252,7 +253,7 @@ private void PrintBody (PrintWriter out, String lhs, String rsltlist, String rsl
    out.println(" <input type=\"submit\" value=\"" + OperationMode + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + OperationMedian + "\" name=\"Operation\">");
    out.println(" <input type=\"submit\" value=\"" + OperationStd + "\" name=\"Operation\">");
-   out.println(" <input type=\"reset\" value=\"Reset\" name=\"reset\">");
+   out.println(" <input type=\"reset\" value=\"" + Reset + "\" name=\"Operation\">");
    out.println("</form>");
    out.println("");
    out.println("</body>");
