@@ -97,10 +97,10 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(OperationMode))
    {
       //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
-      int maxVal, maxCount;
+      Double maxVal, maxCount;
 
     for (int i = 0; i < array.size(); ++i) {
-        int count = 0;
+        Double count = 0;
         for (int j = 0; j < array.size(); ++j) {
             if (array.get(j) == array.get(i)){
              count=count+1;
