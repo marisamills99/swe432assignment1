@@ -68,6 +68,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
+   String rsltlist = new String("");
 
    /*DescriptiveStatistics stats = new DescriptiveStatistics();
 
@@ -82,8 +83,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rhsVal = new Double(rhsStr);
    if (operation.equals(Operation1))
    {
-         rslt = new Double(inputVal.doubleValue());
-         array.add(rslt);
+         double x = new Double(inputVal.doubleValue());
+         array.add(x);
+         rsltlist= String.join(", ", array);
    }
    else if (operation.equals(OperationMean))
    {
@@ -192,6 +194,10 @@ private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
    out.println("  <tr>");
    out.println("   <td>Result:");
    out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rslt + "\" size=6>");
+   out.println("  </tr>");
+   out.println("  <tr>");
+   out.println("   <td> Current List:");
+   out.println("   <td><input type=\"text\" name=\"RHS\" value=\"" + rsltlist + "\" size=6>");
    out.println("  </tr>");
    out.println(" </table>");
    out.println(" <br>");
