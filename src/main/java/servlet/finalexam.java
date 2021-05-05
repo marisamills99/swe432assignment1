@@ -108,12 +108,12 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(OperationMode))
    {
       double mode = array.get(0);
-        double maxCount = 0.0;
+        int maxCount = 0;
         for (int i = 0; i < array.size(); i++) {
             double value = array.get(i);
-            double count = 0.0;
+            int count = 0;
             for (int j = 0; j < array.size(); j++) {
-                if (array.get(j) == value) count++;
+                if (array.get(j) == value){ count++;}
                 if (count > maxCount) {
                     mode = value;
                     maxCount = count;
