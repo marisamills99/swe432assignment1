@@ -90,7 +90,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       
          for (Double s : array) {
             sb.append(s);
-            sb.append(" ");
+            sb.append(", ");
          }
          rsltlist = sb.toString();
         // rsltlist= Arrays.toString(array);
@@ -107,23 +107,23 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    }
    else if (operation.equals(OperationMode))
    {
-      //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
-      double maxVal=0.0;
-      int maxCount=0;
-      int count = 0;
-      for (int i = 0; i < array.size(); ++i) {
-         count=0;
-        for (int j = 0; j < array.size(); ++j) {
-            if (array.get(j) == array.get(i)){
-             count=count+1;
-            }
+      double mode = array.get(0);
+        int maxCount = 0;
+        for (int i = 0; i < array.size(); i++) {
+            double value = array.get(i);
+            int count = 0;
+            for (int j = 0; j < array.size(); j++) {
+                if (array.get(j) == value) count++;
+                if (count > maxCount) {
+                    mode = value;
+                    maxCount = count;
+                    }
+                }
         }
-        if (count >= maxCount) {
-            maxCount = count;
-            maxVal = array.get(i);
+        if (maxCount > 1) {
+            rslt= mode;
         }
-    }
-      rslt= maxVal;
+        rslt= 0;
    }
    else if (operation.equals(OperationMedian))
    {
