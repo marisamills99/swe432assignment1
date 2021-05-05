@@ -119,7 +119,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       Collections.sort(array);
       double median;
       if (array.size() % 2 == 0)
-         median = ((double)array.get(array.size()/2] + (double)array[array.size()/2 - 1))/2;
+         median = ((double)array.get(array.size()/2) + (double)array.get(array.size()/2 - 1))/2;
       else
          median = (double) array.get(array.size()/2);
          rslt= median;
