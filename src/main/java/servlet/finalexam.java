@@ -139,30 +139,22 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       //rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
       //rslt=stats.getStandardDeviation();
-      // Step 1: 
-      double sum = 0;
+
+      double sum = 0.0;
       for (int i = 0; i < array.size(); i++) {
          sum += array.get(i);
       }
       double mean = sum / array.size();
-      double temp = 0;
+      double cursum = 0;
 
       for (int i = 0; i < array.size(); i++)
       {
          double val = array.get(i);
-
-         // Step 2:
-         double squrDiffToMean = Math.pow(val - mean, 2);
-
-         // Step 3:
-         temp += squrDiffToMean;
+         double sqred = Math.pow(val - mean, 2);
+         cursum += sqred;
       }
-
-      // Step 4:
-      double meanOfDiffs = (double) temp / (double) (array.size());
-
-      // Step 5:
-      rslt= Math.sqrt(meanOfDiffs);
+      double mdiffs = (double) cursum / (double) (array.size());
+      rslt= Math.sqrt(mdiffs);
    }
 
    response.setContentType("text/html");
