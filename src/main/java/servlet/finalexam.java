@@ -29,7 +29,7 @@ import javax.servlet.annotation.WebServlet;
 //***********************************************************************
 @WebServlet(
         name = "finalexam",
-        urlPatterns = {"/finalexaxm"}
+        urlPatterns = {"/finalexam"}
     )
 public class finalexam extends HttpServlet
 {
