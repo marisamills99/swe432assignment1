@@ -58,19 +58,19 @@ static String Style ="https://www.cs.gmu.edu/~offutt/classes/432/432-style.css";
 public void doPost (HttpServletRequest request, HttpServletResponse response)
    throws ServletException, IOException
 {
-   Float rslt   = new Double(0.0);
-   Float inputVal = new Double(0.0);
-   Float rhsVal = new Double(0.0);
+   Double rslt   = new Double(0.0);
+   Double inputVal = new Double(0.0);
+   Double rhsVal = new Double(0.0);
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
    if ((lhsStr != null) && (lhsStr.length() > 0))
       inputVal = new Double(lhsStr);
    if ((rhsStr != null) && (rhsStr.length() > 0))
-      rhsVal = new Float(rhsStr);
+      rhsVal = new Double(rhsStr);
    if (operation.equals(Operation1))
    {
-         rslt = new Double(inputVal.floatValue()
+         rslt = new Double(inputVal.doubleValue())
          array.add(inputVal);
    }
    else if (operation.equals(OperationAdd))
