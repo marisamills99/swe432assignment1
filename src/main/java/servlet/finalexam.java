@@ -109,20 +109,20 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    {
       double mode;
       int maxCount = 0;
-      int length = freq.size();
+      int length = array.size();
   
       for (int i = 0; i < length; ++i) 
       {
           int count = 0;
           for (int j = 0; j < length; ++j) 
           {
-              if (freq.get(i) == freq.get(j)) {
+              if (array.get(i) == array.get(j)) {
                   ++count;
               }
               if (count > maxCount) 
               {
               maxCount = count;
-              mode = freq.get(i);
+              mode = array.get(i);
               }
           }           
       }
