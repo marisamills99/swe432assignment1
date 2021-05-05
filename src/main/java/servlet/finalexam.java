@@ -88,7 +88,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
          StringBuffer sb = new StringBuffer();
       
-         for (String s : array) {
+         for (Double s : array) {
             sb.append(s);
             sb.append(" ");
          }
@@ -144,7 +144,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    response.setContentType("text/html");
    PrintWriter out = response.getWriter();
    PrintHead(out);
-   PrintBody(out, lhsStr, rhsStr, rslt.toString());
+   PrintBody(out, lhsStr, rhsStr, rslt.toString(),rsltlist);
    PrintTail(out);
 }  // End doPost
 
@@ -181,7 +181,7 @@ private void PrintHead (PrintWriter out)
  *  Prints the <BODY> of the HTML page with the form data
  *  values from the parameters.
 ********************************************************* */
-private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt)
+private void PrintBody (PrintWriter out, String lhs, String rhs, String rslt,String rsltlist)
 {
    out.println("<body>");
    out.println("<p>");
