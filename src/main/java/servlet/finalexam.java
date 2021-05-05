@@ -9,6 +9,7 @@ import java.io.*;
 import java.util.*;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import org.apache.commons.math;
  
 //Import Servlet Libraries
 import javax.servlet.*;
@@ -44,7 +45,7 @@ List<Double> array = new ArrayList<Double>();
 
 // Button labels
 static String OperationAdd = "Add";
-static String OperationSub = "Subtract";
+static String OperationSub = "Print Standard Deviation";
 static String OperationMean = "Print Mean";
 static String OperationMode = "Print Mode";
 static String OperationMedian = "Print Median";
@@ -67,6 +68,14 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    String operation = request.getParameter("Operation");
    String lhsStr = request.getParameter("LHS");
    String rhsStr = request.getParameter("RHS");
+
+   DescriptiveStatistics stats = new DescriptiveStatistics();
+
+   // Add the data from the array
+   for( int i = 0; i < array.size(); i++) {
+         stats.addValue(array.get(i));
+   }
+
    if ((lhsStr != null) && (lhsStr.length() > 0))
       inputVal = new Double(lhsStr);
    if ((rhsStr != null) && (rhsStr.length() > 0))
@@ -104,9 +113,10 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
     }
       rslt= maxVal;
    }
-   else if (operation.equals(OperationSub))
+   else if (operation.equals(OperationStd))
    {
       //rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
+      rslt=stats.getStandardDeviation();
    }
 
    response.setContentType("text/html");
