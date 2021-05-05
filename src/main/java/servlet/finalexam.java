@@ -70,16 +70,16 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
       rhsVal = new Float(rhsStr);
    if (operation.equals(Operation1))
    {
-         //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
+         rslt = new Double(inputVal.floatValue()
          array.add(inputVal);
    }
    else if (operation.equals(OperationAdd))
    {
-      rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
+      //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
    }
    else if (operation.equals(OperationSub))
    {
-      rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
+      //rslt = new Float(inputVal.floatValue() - rhsVal.floatValue());
    }
 
    response.setContentType("text/html");
