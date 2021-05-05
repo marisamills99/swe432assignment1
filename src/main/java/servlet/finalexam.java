@@ -149,7 +149,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 
       for (int i = 0; i < array.size(); i++)
       {
-         int val = array.get(i);
+         double val = array.get(i);
 
          // Step 2:
          double squrDiffToMean = Math.pow(val - mean, 2);
