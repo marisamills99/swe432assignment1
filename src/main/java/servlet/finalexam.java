@@ -7,7 +7,9 @@
 // Import Java Libraries
 import java.io.*;
 import java.util.*;
-
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+ 
 //Import Servlet Libraries
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -31,6 +33,7 @@ import javax.servlet.annotation.WebServlet;
         name = "finalexam",
         urlPatterns = {"/finalexam"}
     )
+List<Double> array = new ArrayList<Double>();
 public class finalexam extends HttpServlet
 {
 
