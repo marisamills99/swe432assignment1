@@ -116,12 +116,12 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    }
    else if (operation.equals(OperationMedian))
    {
-      Collections.sort(numArray);
+      Collections.sort(array);
       double median;
-      if (numArray.size() % 2 == 0)
-         median = ((double)numArray[numArray.size()/2] + (double)numArray[numArray.size()/2 - 1])/2;
+      if (array.size() % 2 == 0)
+         median = ((double)array.get(array.size()/2] + (double)array[array.size()/2 - 1))/2;
       else
-         median = (double) numArray[numArray.size()/2];
+         median = (double) array.get(array.size()/2);
          rslt= median;
    }
    else if (operation.equals(OperationStd))
@@ -160,7 +160,7 @@ private void PrintHead (PrintWriter out)
    out.println("");
 
    out.println("<head>");
-   out.println("<title>Two buttons example</title>");
+   out.println("<title>Final exam</title>");
    out.println(" <link rel=\"stylesheet\" type=\"text/css\" href=\"" + Style + "\">");
    out.println("</head>");
    out.println("");
