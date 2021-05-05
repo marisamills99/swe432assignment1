@@ -97,9 +97,9 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
    else if (operation.equals(OperationMode))
    {
       //rslt = new Float(inputVal.floatValue() + rhsVal.floatValue());
-      double maxVal, maxCount;
-
-    for (int i = 0; i < array.size(); ++i) {
+      double maxVal=0.0;
+      double maxCount=0.0;
+      for (int i = 0; i < array.size(); ++i) {
         double count = 0.0;
         for (int j = 0; j < array.size(); ++j) {
             if (array.get(j) == array.get(i)){
